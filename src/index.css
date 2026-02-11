@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Birthday Celebration Design System - Cute & Playful Pastel Theme */
+
+@layer base {
+  :root {
+    --background: 330 30% 98%;
+    --foreground: 280 40% 25%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 280 40% 25%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 280 40% 25%;
+
+    --primary: 330 70% 70%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 270 50% 80%;
+    --secondary-foreground: 280 40% 25%;
+
+    --muted: 200 40% 92%;
+    --muted-foreground: 280 20% 50%;
+
+    --accent: 160 50% 75%;
+    --accent-foreground: 280 40% 25%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 330 30% 88%;
+    --input: 330 30% 88%;
+    --ring: 330 70% 70%;
+
+    --radius: 1rem;
+
+    /* Custom birthday colors */
+    --birthday-pink: 330 70% 70%;
+    --birthday-lavender: 270 50% 75%;
+    --birthday-mint: 160 50% 75%;
+    --birthday-peach: 25 80% 80%;
+    --birthday-blue: 200 70% 80%;
+    --birthday-yellow: 45 90% 75%;
+    --birthday-coral: 10 80% 75%;
+
+    /* Gradient backgrounds */
+    --gradient-celebration: linear-gradient(135deg, hsl(330 70% 85%), hsl(270 50% 85%), hsl(200 70% 90%));
+    --gradient-magic: linear-gradient(180deg, hsl(270 50% 90%), hsl(330 70% 90%));
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 280 40% 8%;
+    --foreground: 330 30% 95%;
+
+    --card: 280 30% 12%;
+    --card-foreground: 330 30% 95%;
+
+    --popover: 280 30% 12%;
+    --popover-foreground: 330 30% 95%;
+
+    --primary: 330 70% 65%;
+    --primary-foreground: 280 40% 10%;
+
+    --secondary: 270 40% 30%;
+    --secondary-foreground: 330 30% 95%;
+
+    --muted: 280 30% 20%;
+    --muted-foreground: 330 20% 70%;
+
+    --accent: 160 40% 35%;
+    --accent-foreground: 330 30% 95%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 280 30% 20%;
+    --input: 280 30% 20%;
+    --ring: 330 70% 65%;
+
+    /* Dark mode birthday colors */
+    --birthday-pink: 330 60% 55%;
+    --birthday-lavender: 270 40% 55%;
+    --birthday-mint: 160 40% 45%;
+    --birthday-peach: 25 60% 55%;
+    --birthday-blue: 200 60% 55%;
+    --birthday-yellow: 45 70% 55%;
+    --birthday-coral: 10 60% 55%;
+
+    --gradient-celebration: linear-gradient(135deg, hsl(330 50% 25%), hsl(270 40% 25%), hsl(200 50% 25%));
+    --gradient-magic: linear-gradient(180deg, hsl(270 40% 20%), hsl(330 50% 20%));
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Nunito', 'Comic Neue', system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .gradient-celebration {
+    background: var(--gradient-celebration);
+  }
+
+  .gradient-magic {
+    background: var(--gradient-magic);
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, hsl(var(--birthday-pink)), hsl(var(--birthday-lavender)), hsl(var(--birthday-blue)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+/* Import playful fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Comic+Neue:wght@400;700&display=swap');
